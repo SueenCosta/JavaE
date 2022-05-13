@@ -7,8 +7,15 @@ public class Despesas {
  private String descricao;
  private Double valor;
  private Boolean edit;
+ private Boolean list;
  
  
+public Boolean getList() {
+	return list;
+}
+public void setList(Boolean list) {
+	this.list = list;
+}
 public String getData() {
 	return data;
 }
@@ -21,7 +28,7 @@ public String getDescricao() {
 public void setDescricao(String descricao) {
 	this.descricao = descricao;
 }
-public Double getValor() {  //puchar informaçao
+public Double getValor() {		//puchar informaçao
 	return valor;
 }
 public void setValor(Double valor) {
