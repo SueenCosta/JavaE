@@ -15,6 +15,31 @@
 <h:outputStylesheet library="css" name = "styles.css"/>
 
 	<h:form>
+	
+	
+	
+			<h:panelGrid columns="2">
+				<f:facet name="header">
+				Lista de Despesas
+				</f:facet>
+			
+				Data:
+				<h:outputText value="#{tabela.despesas}"/>
+				<h:outputText value = "#{d.data}" rendered = "#{!d.edit}"/>  
+				
+				Descrição:
+				<h:outputText value="#{tabela.despesas}" />
+				
+				Valor:
+				<h:outputText value="#{tabela.despesas}"/>
+				<h:inputText value = "#{d.valor}" rendered = "#{d.edit}"/>
+		
+		</h:panelGrid>
+
+		
+	<br/>
+	<br/>
+	<h:commandButton value = "Inserir" action = "#{tabela.inserir}"/>
 		<h:panelGroup rendered="#{tabela.despesas.size() > 0}">
 		<table class="tabela">
 			<tr>
@@ -67,34 +92,10 @@
 			</table>
 	</h:panelGroup>
 	
-	<h:panelGroup rendered="#{tabela.despesas.size() == 0}">
-		<h:outputText value = "Não existe despesas cadastradas" styleClass="message"/>
-	</h:panelGroup>
-	
-	
-	
-			<h:panelGrid columns="2">
-				<f:facet name="header">
-				Lista
-				</f:facet>
-			
-				Nome:
-				<h:outputText value="#{tabela.despesas}"/>
-				<h:outputText value = "#{d.data}" rendered = "#{!d.edit}"/>  
-				
-				Descrição:
-				<h:outputText value="#{tabela.despesas}" />
-				
-				Valor:
-				<h:outputText value="#{tabela.despesas}"/>
-				<h:inputText value = "#{d.valor}" rendered = "#{d.edit}"/>
-		
-		</h:panelGrid>
 
-		
-	<br/>
-	<br/>
-	<h:commandButton value = "Inserir" action = "#{tabela.inserir}"/>
+	
+	
+	
 	</h:form>
 </body>
 	

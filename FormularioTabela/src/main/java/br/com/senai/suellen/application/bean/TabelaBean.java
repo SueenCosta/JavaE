@@ -18,13 +18,12 @@ public class TabelaBean implements Serializable{  			//manipular
 	private List<Despesas> despesas = new ArrayList<>(); 		//liga as classes
 
 	
-	public String Lista() {
+	public String List() {
 		Despesas l = new Despesas();
 		l.setList(true);
 		despesas.add(l);
 		return null;
 	}
-	
 	
 	
 	
